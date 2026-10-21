@@ -235,6 +235,21 @@ p{margin:0}
 .socials a{text-decoration:none;font-size:14px;border:1px solid var(--line-d);padding:9px 15px;border-radius:999px;transition:background .3s,color .3s}
 .socials a:hover{background:var(--foam);color:var(--lagoon)}
 
+.duo figure{margin:0;position:relative}
+.duo figcaption{position:absolute;left:12px;bottom:12px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;background:rgba(14,23,21,.62);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px;color:var(--foam)}
+.lang{margin-left:auto;display:inline-flex;border:1px solid var(--line-d);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--foam);font:500 12px var(--f-mono);letter-spacing:.1em;padding:7px 13px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--foam);color:var(--lagoon)}
+.chan-head{margin-bottom:16px;color:var(--mute-d)}
+.chans{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;padding-bottom:50px;border-bottom:1px solid var(--line-d);margin-bottom:40px}
+.ch{display:grid;grid-template-columns:1fr auto;gap:2px 10px;text-decoration:none;border:1px solid var(--line-d);border-radius:4px;padding:16px 18px;transition:background .3s,border-color .3s}
+.ch b{font:400 22px/1.1 var(--f-disp)}
+.ch span{grid-column:1;font-size:13px;color:var(--mute-d)}
+.ch i{grid-row:1/3;grid-column:2;font-style:normal;align-self:center;color:var(--verd-2);transition:transform .3s var(--ease)}
+.ch:hover{background:var(--lagoon-2);border-color:var(--verd-2)}
+.ch:hover i{transform:translate(3px,-3px)}
+.place{display:flex;gap:10px;align-items:center;margin-top:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#d6dfd8;flex-wrap:wrap}
+.place b{font-weight:500;color:#fff}
 footer{background:var(--lagoon);color:var(--foam);padding-top:60px;padding-bottom:calc(28px + env(safe-area-inset-bottom,0px));overflow:hidden;border-top:1px solid var(--line-d)}
 .fgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;padding-bottom:40px}
 @media(max-width:820px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -293,6 +308,7 @@ footer{background:var(--lagoon);color:var(--foam);padding-top:60px;padding-botto
       <div class="row fade">
         <div>
           <p class="lede">Danh sách thạc sĩ châu Âu do hai kiến trúc sư từng học ở Venezia và Milano tổng hợp: 22 nước, 10 ngành, đếm ngược hạn nộp từng ngày, lọc theo học bổng, học phí và xếp hạng QS. Miễn phí, có tiếng Việt.</p>
+          <div class="place"><span>Đang chiếu</span><b id="place">Bacino di San Marco · Venezia</b></div>
           <div class="next" id="heroNext" hidden><span class="dot"></span><span>Hạn gần nhất:</span><b id="hnDays">–</b><span id="hnText"></span></div>
         </div>
         <div class="acts">
@@ -401,20 +417,21 @@ footer{background:var(--lagoon);color:var(--foam);padding-top:60px;padding-botto
   <section class="dark pad" id="tui-minh">
     <div class="wrap about">
       <div class="duo">
-        <div class="p rv-img"><img data-par src="img/cannaregio.webp" alt="Kênh Cannaregio, Venezia, lúc chạng vạng" loading="lazy"></div>
-        <div class="p rv-img"><img data-par src="img/bovolo.webp" alt="Scala Contarini del Bovolo, Venezia" loading="lazy"></div>
+        <figure class="p rv-img"><img data-par src="img/sanmarco.webp" alt="Tháp chuông San Marco và Cung điện Doge nhìn từ vịnh San Marco, Venezia" loading="lazy"><figcaption>Venezia · Nhân</figcaption></figure>
+        <figure class="p rv-img"><img data-par src="img/duomo.webp" alt="Mặt bên Duomo di Milano" loading="lazy"><figcaption>Milano · Mai</figcaption></figure>
       </div>
       <div>
-        <div class="eyebrow mono rv"><span class="n">04</span><span class="bar"></span><span>Về tụi mình</span></div>
-        <p class="quote rv">Nhân và Mai, hai kiến trúc sư. <em>Từ Venezia &amp; Milano, về Sài Gòn.</em></p>
-        <p class="kicker rv" style="margin-top:24px">Nhân học ở IUAV Venezia, Mai học ở Politecnico di Milano. Về nước, tụi mình mở một xưởng thiết kế nhỏ dưới hiên một căn nhà cũ ở quận 3, và kể chuyện nghề, chuyện ở Ý, chuyện chọn vật liệu trên kênh Hai KTS dưới hiên nhà.</p>
-        <div class="acts rv" style="margin-top:28px"><a class="btn light" href="https://www.haiktsduoihiennha.com/about-us" target="_blank" rel="noopener">Đọc câu chuyện <span class="ar">→</span></a></div>
-        <div class="socials rv">
-          <a href="https://www.youtube.com/@HaiKTS_duoihiennha" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://www.tiktok.com/@haiktsduoihiennha" target="_blank" rel="noopener">TikTok</a>
-          <a href="https://www.instagram.com/haikts.duoihiennha/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.threads.net/@haikts.duoihiennha" target="_blank" rel="noopener">Threads</a>
-          <a href="https://www.facebook.com/108004965376553" target="_blank" rel="noopener">Facebook</a>
+        <div class="eyebrow mono rv"><span class="n">04</span><span class="bar"></span><span data-l="vi">Về tụi mình</span><span data-l="en" hidden>About us</span>
+          <span class="lang" role="group" aria-label="Ngôn ngữ / Language"><button type="button" data-set="vi" aria-pressed="true">VI</button><button type="button" data-set="en" aria-pressed="false">EN</button></span></div>
+        <div data-l="vi">
+          <p class="quote rv">Nhân và Mai, hai kiến trúc sư. <em>Từ Venezia &amp; Milano, về Sài Gòn.</em></p>
+          <p class="kicker rv" style="margin-top:24px">Nhân học ở IUAV Venezia, Mai học ở Politecnico di Milano. Sáu năm ở Ý dạy tụi mình rằng kiến trúc tốt được thương lượng với ánh sáng, vật liệu và thời gian. Về nước, tụi mình mở một xưởng thiết kế nhỏ dưới hiên một căn nhà cũ ở quận 3, và kể chuyện nghề, chuyện ở Ý, chuyện chọn vật liệu trên kênh Hai KTS dưới hiên nhà.</p>
+          <div class="acts rv" style="margin-top:28px"><a class="btn light" href="https://www.haiktsduoihiennha.com/about-us" target="_blank" rel="noopener">Đọc câu chuyện <span class="ar">→</span></a></div>
+        </div>
+        <div data-l="en" hidden>
+          <p class="quote">Nhân and Mai, two architects. <em>From Venice &amp; Milan, back to Saigon.</em></p>
+          <p class="kicker" style="margin-top:24px">Nhân studied at IUAV Venezia, Mai at Politecnico di Milano. Six years in Italy taught us that good architecture is negotiated with light, materials and time. Back home we opened a small design studio under the porch of an old house in District 3. On our channel, Hai KTS dưới hiên nhà (two architects under the porch), we talk about the profession, life in Italy and choosing materials.</p>
+          <div class="acts" style="margin-top:28px"><a class="btn light" href="https://www.haiktsduoihiennha.com/about-us" target="_blank" rel="noopener">Read our story <span class="ar">→</span></a></div>
         </div>
       </div>
     </div>
@@ -423,10 +440,12 @@ footer{background:var(--lagoon);color:var(--foam);padding-top:60px;padding-botto
 
 <footer>
   <div class="wrap">
+    <div class="chan-head"><span class="mono">Tất cả kênh của tụi mình · All our channels</span></div>
+    <div class="chans"><a class="ch" href="https://www.haiktsduoihiennha.com/" target="_blank" rel="noopener"><b>Website</b><span>haiktsduoihiennha.com</span><i>↗</i></a><a class="ch" href="https://www.youtube.com/@HaiKTS_duoihiennha" target="_blank" rel="noopener"><b>YouTube</b><span>@HaiKTS_duoihiennha</span><i>↗</i></a><a class="ch" href="https://www.tiktok.com/@haiktsduoihiennha" target="_blank" rel="noopener"><b>TikTok</b><span>@haiktsduoihiennha</span><i>↗</i></a><a class="ch" href="https://www.instagram.com/haikts.duoihiennha/" target="_blank" rel="noopener"><b>Instagram</b><span>@haikts.duoihiennha</span><i>↗</i></a><a class="ch" href="https://www.facebook.com/haiktsduoihiennha/" target="_blank" rel="noopener"><b>Facebook</b><span>Hai KTS dưới hiên nhà</span><i>↗</i></a><a class="ch" href="https://www.threads.com/@haikts.duoihiennha" target="_blank" rel="noopener"><b>Threads</b><span>@haikts.duoihiennha</span><i>↗</i></a><a class="ch" href="https://haiktsduoihiennha.substack.com" target="_blank" rel="noopener"><b>Substack</b><span>Bản tin dài · newsletter</span><i>↗</i></a><a class="ch" href="https://beacons.ai/haikts_duoihiennha" target="_blank" rel="noopener"><b>Beacons</b><span>Tất cả link · link in bio</span><i>↗</i></a><a class="ch" href="https://haiktsduoihiennha.gumroad.com/" target="_blank" rel="noopener"><b>Gumroad</b><span>Ebook &amp; key EuroMasters Pro</span><i>↗</i></a></div>
     <div class="fgrid">
-      <div><h4>Nổi bật kỳ này</h4><a data-feature href="#" target="_blank" rel="noopener">Danh sách Thạc sĩ 2026</a></div>
+      <div><h4>Nổi bật kỳ này</h4><a data-feature href="#" target="_blank" rel="noopener">Danh sách Thạc sĩ 2026</a><a href="https://haiktsduoihiennha.gumroad.com/l/euromasters-pro" target="_blank" rel="noopener">Key EuroMasters Pro</a></div>
       <div><h4>Công cụ</h4><div id="flinks"></div></div>
-      <div><h4>Kênh</h4><a href="https://www.youtube.com/@HaiKTS_duoihiennha" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@haiktsduoihiennha" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/haikts.duoihiennha/" target="_blank" rel="noopener">Instagram</a></div>
+      <div><h4>Đọc &amp; nhận tin</h4><a href="https://haiktsduoihiennha.substack.com" target="_blank" rel="noopener">Substack</a><a href="https://beacons.ai/haikts_duoihiennha" target="_blank" rel="noopener">Beacons</a><a href="https://haiktsduoihiennha.gumroad.com/" target="_blank" rel="noopener">Gumroad</a></div>
       <div><h4>Tụi mình</h4><a href="https://www.haiktsduoihiennha.com/about-us" target="_blank" rel="noopener">About us</a><a href="#top">Lên đầu trang</a></div>
     </div>
     <div class="wordmark" aria-hidden="true">Hai KTS <i>dưới hiên nhà</i></div>
@@ -529,6 +548,15 @@ footer{background:var(--lagoon);color:var(--foam);padding-top:60px;padding-botto
   var hv=$("#heroVid");if(hv&&hv.play)hv.play().catch(function(){});
   function open(){var c=$("#curtain");if(!c)return;c.classList.add("out");document.documentElement.classList.add("go");setTimeout(function(){c.remove()},1200)}
   setTimeout(open,RM?0:1250);
+  /* nhãn địa điểm theo từng cảnh của video mở đầu */
+  var PL=[[0,"Bacino di San Marco · Venezia"],[3.8,"Duomo di Milano"],[7.6,"Palazzo Ducale &amp; San Marco · Venezia"],[11.4,"Politecnico di Milano · Piazza Leonardo da Vinci"],[15.2,"Campanile di San Marco · Venezia"],[19,"Porta Nuova · Milano"]];
+  var plEl=$("#place"),lastPl=-1;
+  (function plTick(){if(hv){var tt=hv.currentTime||0,i=0;PL.forEach(function(p,j){if(tt>=p[0]+.4)i=j});if(i!==lastPl){lastPl=i;plEl.innerHTML=PL[i][1]}}requestAnimationFrame(plTick)})();
+  /* song ngữ mục 04 */
+  $$(".lang button").forEach(function(b){b.onclick=function(){var l=b.dataset.set;$$(".lang button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    $$("#tui-minh [data-l]").forEach(function(el){el.hidden=el.dataset.l!==l});try{localStorage.setItem("hk-lang",l)}catch(e){}}});
+  try{if(localStorage.getItem("hk-lang")==="en")$('.lang button[data-set="en"]').click()}catch(e){}
+
 })();
 </script>
 </body>
