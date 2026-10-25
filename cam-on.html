@@ -38,6 +38,12 @@ h1 em{color:var(--verd)}
 .more{margin-top:clamp(40px,6vw,70px);padding-top:24px;border-top:1px solid var(--line);display:flex;gap:10px 22px;flex-wrap:wrap;font-size:15px}
 .more a{color:var(--verd)}
 @media (max-width:560px){.books{grid-template-columns:1fr}}
+/* nhúng trong Google Sites (haiktsduoihiennha.com/cảm-ơn): bỏ thanh tên, ảnh bìa nhỏ lại */
+.embed .top{display:none}
+.embed .wrap{padding-block:24px 32px}
+.embed .book{flex-direction:row;align-items:center}
+.embed .book img{width:110px;flex:none}
+.embed .book div{display:flex;flex-direction:column;gap:12px;min-width:0}
 </style>
 </head>
 <body>
@@ -52,21 +58,22 @@ h1 em{color:var(--verd)}
   <div class="books">
     <div class="book">
       <img src="img/ebook-cheat.webp" alt="Hé lộ Cheat Code du học Ý (ngành kiến trúc)">
-      <h2>Hé lộ Cheat Code du học Ý (ngành kiến trúc)</h2>
-      <a class="btn" href="https://haiktsduoihiennha.gumroad.com/l/CheatCodeDuHocY?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-cheatcode" target="_blank" rel="noopener">Tải Cheat Code <span aria-hidden="true">→</span></a>
+      <div><h2>Hé lộ Cheat Code du học Ý (ngành kiến trúc)</h2>
+      <a class="btn" href="https://haiktsduoihiennha.gumroad.com/l/CheatCodeDuHocY?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-cheatcode" target="_blank" rel="noopener">Tải Cheat Code <span aria-hidden="true">→</span></a></div>
     </div>
     <div class="book">
       <img src="img/ebook-camnang.webp" alt="Cẩm nang chuyên sâu du học Ý cho KTS 2026">
-      <h2>Cẩm nang chuyên sâu du học Ý cho KTS 2026</h2>
-      <a class="btn" href="https://haiktsduoihiennha.gumroad.com/l/CAMNANGCHUYENSAUDUHOCYCHOKTS2026?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-camnang" target="_blank" rel="noopener">Tải Cẩm nang <span aria-hidden="true">→</span></a>
+      <div><h2>Cẩm nang chuyên sâu du học Ý cho KTS 2026</h2>
+      <a class="btn" href="https://haiktsduoihiennha.gumroad.com/l/CAMNANGCHUYENSAUDUHOCYCHOKTS2026?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-camnang" target="_blank" rel="noopener">Tải Cẩm nang <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
   <p class="note">Không thấy email của tụi mình? Xem thêm mục Quảng cáo hoặc Spam, rồi bấm “Không phải spam” để các thư sau vào đúng hộp thư.</p>
   <div class="more">
-    <a href="https://nhan0311.github.io/euromasters-tracker/?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-euromasters">282 chương trình thạc sĩ châu Âu 2026 →</a>
-    <a href="https://www.youtube.com/@HaiKTS_duoihiennha">YouTube</a>
-    <a href="https://www.haiktsduoihiennha.com/?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-home">Trang chủ</a>
+    <a target="_blank" rel="noopener" href="https://nhan0311.github.io/euromasters-tracker/?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-euromasters">282 chương trình thạc sĩ châu Âu 2026 →</a>
+    <a target="_blank" rel="noopener" href="https://www.youtube.com/@HaiKTS_duoihiennha">YouTube</a>
+    <a target="_top" href="https://www.haiktsduoihiennha.com/?utm_source=brevo&utm_medium=email&utm_campaign=welcome&utm_content=camon-home">Trang chủ</a>
   </div>
 </div>
+<script>try{if(window.self!==window.top)document.documentElement.classList.add('embed')}catch(e){document.documentElement.classList.add('embed')}</script>
 </body>
 </html>
